@@ -1,6 +1,24 @@
 $max-width: 120rem;
-$main-side-padding: 15%;
-
+$main-side-padding: 10%;
+$success-btn-color: #4CAE50;
+$span-text-color: #286DBD;
+$main-text-color: #63718E;
+$header-font: 'Epilogue', sans-serif;
+$paragraph-font: 'Open Sans', sans-serif;
+@mixin success-box-shadow {
+  box-shadow: 0 5px 10px rgba(76, 174, 80, 0.3);
+}
+@mixin primary-box-shadow {
+  box-shadow: 0 2px 16px rgba(32, 108, 164, 0.16);
+}
+@mixin paragraph-middle {
+  font-family: $paragraph-font;
+  font-size: 1.125rem;
+}
+@mixin paragraph-small {
+  font-family: $paragraph-font;
+  font-size: 1rem;
+}
 
 *{
   margin: 0;
@@ -18,9 +36,9 @@ body {
     align-items: center;
     padding: 0 $main-side-padding;
     background-color: #fff;
-    box-shadow: 0 2px 16px rgba(32, 108, 164, 0.16);
+    @include primary-box-shadow;
     p {
-      color: #63718E;
+      color: $main-text-color;
       font-size: 15px;
       margin: 0 0.78125rem;
     }
@@ -44,7 +62,7 @@ body {
         }
         &:hover {
           border: 1px solid rgba(32, 108, 164, 0.16);
-          box-shadow: 0 2px 16px rgba(32, 108, 164, 0.16) ;
+          @include primary-box-shadow;
           border-radius: 5px;
         }
       }
@@ -58,7 +76,7 @@ body {
         .nav_item {
           list-style-type: none;
           font-size: 15px;
-          color: #63718E;
+          color: $main-text-color;
           margin-right: 0.9375rem;
           align-self: center;
           &:hover {
@@ -80,19 +98,19 @@ body {
       }
       .success-btm {
         color: #ffffff;
-        background-color: #4CAE50;
+        background-color: $success-btn-color;
         border: none;
         &:hover {
-          box-shadow: 0 5px 10px rgba(76, 174, 80, 0.3);
+          @include success-box-shadow;
         }
       }
       .primary-btn {
-        color: #63718E;
-        border: 2px solid #63718E;
+        color: $main-text-color;
+        border: 2px solid $main-text-color;
         background-color: #fff;
         &:hover {
-          color: #4CAE50;
-          border: 2px solid #4CAE50;
+          color: $success-btn-color;
+          border: 2px solid $success-btn-color;
         }
       }
     }
@@ -100,7 +118,6 @@ body {
   // -- header style end here --
 
   // --pop-up style start here --
-
   .popup {
     position: absolute;
     top: 0;
@@ -117,7 +134,7 @@ body {
     position: absolute;
     top: 10%;
     left: 17%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.1);
     img {
       z-index: 1;
     }
@@ -164,14 +181,88 @@ body {
         input[type=submit]{
           width: 200px;
           color: #ffffff;
-          background-color: #4CAE50;
+          background-color: $success-btn-color;
           &:hover {
             cursor: pointer;
-            box-shadow: 0 5px 10px rgba(76, 174, 80, 0.3);
+            @include success-box-shadow;
           }
         }
       }
 
     }
+  }
+  // -- pop-up style end here --
+  // -- article style start hehe --
+  article {
+    display: flex;
+    flex-wrap: wrap;
+    max-width:  $max-width;
+    padding: 7.8125rem $main-side-padding;
+    .promo {
+      flex-basis: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      .promo-info {
+        flex-basis: 47%;
+        margin-right: auto;
+        padding-right: 1rem;
+        h1 {
+          color: #111563;
+          font-size: 2.625em;
+          font-family: $header-font;
+        }
+        p {
+          margin: 1.25em 0;
+          line-height: 1.6875rem;
+          @include paragraph-middle;
+          span {
+            color: $span-text-color;
+          }
+        }
+
+        input {
+          background-color: $success-btn-color;
+          color: #fff;
+          border-radius: 10px;
+          width: 17.5rem;
+          height: 3.3125em;
+          outline: none;
+          border: none;
+          font-size: 1.25em;
+          font-weight: 700;
+          margin: 1.875rem 0 0 0;
+          &:hover {
+            @include success-box-shadow;
+            cursor: pointer;
+          }
+        }
+      }
+      .promo-img {
+        flex-basis: 53%;
+        max-width: 682px;
+        margin-left: auto;
+        background-image: url("../img/dots.svg");
+        background-repeat: no-repeat;
+        background-position: top left;
+        padding-left: 103px;
+        overflow: hidden;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+      }
+      .promo-bg {
+        background-image: url("../img/promo-vector (1).svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: matrix(0.92, 0.39, -0.39, 0.92, 0, 0);
+        width: 632px;
+        height: 678px;
+        z-index: -1;
+        position: relative;
+        top: -630px;
+        left: 50%;
+        overflow: hidden;
+      }
+    }
+
   }
 }
