@@ -36,7 +36,7 @@ function styles(){
 
 function startWatch(){
     watch('app/**/*.scss', styles);
-    watch(['app/**/*.js', '!app/**/min/js'],scripts);
+    watch(['app/**/*.js', '!app/**/**.min.js'],scripts);
     watch ('app/**/*.html').on('change', browserSync.reload);
 }
 exports.browsersync=browsersync;
