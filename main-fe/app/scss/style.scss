@@ -3,6 +3,7 @@ $main-side-padding: 10%;
 $success-btn-color: #4CAE50;
 $span-text-color: #286DBD;
 $main-text-color: #63718E;
+$header-color: #111563;
 $header-font: 'Epilogue', sans-serif;
 $paragraph-font: 'Open Sans', sans-serif;
 @mixin success-box-shadow {
@@ -14,10 +15,12 @@ $paragraph-font: 'Open Sans', sans-serif;
 @mixin paragraph-middle {
   font-family: $paragraph-font;
   font-size: 1.125rem;
+  color: #63718E;
 }
 @mixin paragraph-small {
   font-family: $paragraph-font;
   font-size: 1rem;
+  color: #63718E;
 }
 
 *{
@@ -207,7 +210,7 @@ body {
         margin-right: auto;
         padding-right: 1rem;
         h1 {
-          color: #111563;
+          color: $header-color;
           font-size: 2.625em;
           font-family: $header-font;
         }
@@ -261,6 +264,60 @@ body {
         top: -630px;
         left: 50%;
         overflow: hidden;
+      }
+    }
+    .requirements {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 100%;
+      img {
+        flex-basis: 45%;
+        max-width: 600px;
+      };
+      .requirements-info {
+        padding-top: 5.53125rem;;
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        h2 {
+          color: $header-color;
+          font-family: $header-font;
+        }
+        p{
+          margin: 1.25em 0;
+          line-height: 1.6875rem;
+          @include paragraph-middle;
+        }
+      }
+      .note {
+        background-color: #fff;
+        width: 23.75rem;
+        height: 17.5625rem;
+        display: flex;
+        @include primary-box-shadow;
+        border-radius: 10px;
+        flex-wrap: wrap;
+        padding: 1.8125rem 1.75rem 2.375em;
+        position: relative;
+        top: -200px;
+        left: 150px;
+        img {
+          flex-basis: 10%;
+          max-width: 60px;
+          height: 60px;
+        }
+        h4 {
+          flex-basis: 60%;
+          font-family: $header-font;
+          color: $header-color;
+          font-size: 1.125rem;
+          margin-top: 20px;
+          margin-left: 1rem;
+        }
+        p {
+          flex-basis: 100%;
+          @include paragraph-small;
+        }
       }
     }
 
