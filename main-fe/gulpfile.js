@@ -4,7 +4,10 @@ const concat = require('gulp-concat'); // add concat
 const uglify = require('gulp-uglify-es').default; //uglify for min
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
-const cleancss = require('gulp-clean-css')
+const cleancss = require('gulp-clean-css');
+const imagemin = require('gulp-imagemin');
+const newer = require('gulp-newer');
+
 // add function for serve
 function browsersync(){
     browserSync.init ({
@@ -34,6 +37,13 @@ function styles(){
 
 }
 
+function images () {
+    return src ('app/img/src/**/*')
+        .pipe(newer('app/img/'))
+        .pipe(imagemin())
+        .pipe(dest('app/img/'))
+}
+
 function startWatch(){
     watch('app/**/*.scss', styles);
     watch(['app/**/*.js', '!app/**/**.min.js'],scripts);
@@ -42,5 +52,6 @@ function startWatch(){
 exports.browsersync=browsersync;
 exports.scripts=scripts;
 exports.styles=styles;
+exports.images=images;
 
 exports.default = parallel(styles, scripts, browsersync, startWatch)
