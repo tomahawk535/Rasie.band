@@ -474,7 +474,7 @@ body {
             p {
               flex-basis: 100%;
               @include paragraph-small;
-              margin-top: 1rem;
+              margin-top: 2rem;
             }
           }
         }
@@ -482,6 +482,37 @@ body {
           flex-basis: 50%;
           @include paragraph-middle;
           margin-top: 2rem;
+          line-height: 1.6875em;
+        }
+      }
+    }
+    .faq {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap;
+      text-align: center;
+      padding-top: 12.5rem;
+      h2 {
+        flex: 100%;
+        margin-bottom: 0.625rem;
+      }
+      .faq_item {
+        flex-basis: 80%;
+        @include primary-box-shadow;
+        border-radius: 10px;
+        margin-top: 1.25rem;
+        padding: 1.25rem;
+        text-align: left;
+        h3 {
+          font-size: 1.375rem;
+          font-family:  $header-font;
+          color:  $header-color;
+        }
+        p {
+          @include  paragraph-middle;
+          line-height: 1.6875rem;
+          margin-top: 1.75rem;
         }
       }
     }
