@@ -412,6 +412,18 @@ body {
         }
       }
     }
-
+    .mistakes {
+      width: 100%;
+      display: flex;
+      padding-top: 7.5rem;
+      .mistakes_info {
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+      }
+      .mistakes_img {
+        flex-basis: 50%;
+      }
+    }
   }
 }
