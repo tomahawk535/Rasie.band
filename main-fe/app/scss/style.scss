@@ -306,6 +306,87 @@ body {
         }
       }
     }
+    .calc {
+      width: 85%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      @include primary-box-shadow;
+      margin: 0 auto 6.25rem;
+      padding: 3.6875rem;
+      h2 {
+        text-align: center;
+        color:  $header-color;
+        font-family:  $header-font;
+        font-size: 2rem;
+      }
+      p {
+        text-align: center;
+        @include paragraph-middle;
+      }
+      form {
+        flex-basis: 100%;
+        margin: 1.5625rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        #workType, #academicLevel, .counter, .calendar, .summ {
+          flex-basis: 17%;
+          text-align: center;
+          background-color: #F9FAFC;
+          @include primary-box-shadow;
+          @include paragraph-small;
+          height: 3.125rem;
+          border-radius: 10px;
+          border: none;
+          align-self: center;
+          outline: none;
+        }
+        #paperType, #subj {
+          flex-basis: 37.7%;
+          text-align: center;
+          margin-top: 1rem;
+          border-radius: 10px;
+          background-color: #F9FAFC;
+          @include primary-box-shadow;
+          @include paragraph-small;
+          height: 3.125rem;
+          border: none;
+          outline: none;
+        }
+        select {
+          padding:  0 .5rem;
+          option {
+            @include paragraph-small;
+            background-color: #f9fafc;
+            outline: none;
+            border: none;
+            @include primary-box-shadow;
+            border-radius: 6px;
+            padding: 0 .03rem;
+            .hover-color:hover {
+              background-color: #e1fae2;
+            }
+          }
+        }
+        input {
+          flex-basis: 19%;
+          margin-top: 1rem;
+          border-radius: 10px;
+          border: none;
+          height: 3.125rem;
+          outline: none;
+          background-color:  $success-btn-color;
+          @include success-box-shadow;
+          color: #fff;
+          &:hover{
+            cursor: pointer;
+          }
+        }
+
+      }
+    }
     .carousel {
       width: 100%;
       display: flex;

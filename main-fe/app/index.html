@@ -102,7 +102,7 @@
         <div class="calc">
             <h2>Berechne den Preis</h2>
             <p>Bitte fülle alle nötigen Felder aus und der Preisrechner zeigt dir den Preis</p>
-            <form name="calc_prise">
+            <form name="calc_prise" action="" method="get">
                 <select name="workType" id="workType">
                     <option value="1">Schreiben</option>
                     <option value="2">Korrektur</option>
@@ -114,7 +114,7 @@
                     <option value="3">Master</option>
                     <option value="4">Promotion</option>
                 </select>
-                <div class="caunter">
+                <div class="counter">
                     <p>100</p>
                 </div>
                 <div class="calendar">
@@ -124,7 +124,7 @@
                     € 56.25
                 </div>
                 <select name="paperType" id="paperType">
-                    <option value="1">Bechelorarbeit</option>
+                    <option value="1" class="hover-color">Bechelorarbeit</option>
                     <option value="2">Doktorarbeit</option>
                     <option value="3">Essay</option>
                     <option value="4">Expose</option>
@@ -139,7 +139,7 @@
 
 
                 </select>
-                <input type="button" value="Anfragen">
+                <input type="submit" value="Anfragen">
             </form>
         </div>
 

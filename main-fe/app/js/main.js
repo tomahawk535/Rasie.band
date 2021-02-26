@@ -10,11 +10,9 @@ $(document).ready(function(){
     FaqHide();
 });
 
-
 //Функция отображения PopUp
 function PopUpShow(){
     $("#pop-up-form").fadeIn();
-
 }
 $('#pop-up').click(PopUpShow)
 
@@ -33,3 +31,18 @@ function FaqOpen () {
    $(this).siblings('.faq-hidden-text').toggle();
 }
 $('.faq-toggle').click(FaqOpen);
+
+
+// форма
+
+
+function SubmitForm () {
+    let $form = $(this);
+    $.post(
+        $form.attr('action'),
+        $form.serialize()
+    );
+    return false;
+}
+
+$('form').submit (SubmitForm);
