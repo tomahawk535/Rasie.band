@@ -504,6 +504,14 @@ body {
         margin-top: 1.25rem;
         padding: 1.25rem;
         text-align: left;
+        img {
+          position: relative;
+          top: -18%;
+          left: 97%;
+          &:hover {
+            cursor: pointer;
+          }
+        }
         h3 {
           font-size: 1.375rem;
           font-family:  $header-font;
@@ -512,7 +520,7 @@ body {
         p {
           @include  paragraph-middle;
           line-height: 1.6875rem;
-          margin-top: 1.75rem;
+          margin-top: 0.625rem;
         }
       }
     }

@@ -6,7 +6,8 @@ $(document).ready(function(){
         dots: true,
         slidesToShow: 3,
         adaptiveHeight: true
-    })
+    });
+    FaqHide();
 });
 
 
@@ -23,3 +24,13 @@ function PopUpHide() {
 }
 $('#pop-up-close').click(PopUpHide);
 
+// Функция скритыи FAQ
+function FaqHide () {
+    $('.faq-hidden-text').hide();
+}
+// Функция открытия FAQ
+function FaqOpen () {
+    a = $('.faq-hidden-text')
+    a.toggle();
+}
+$('.faq-toggle').click(FaqOpen);
