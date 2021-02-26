@@ -523,6 +523,109 @@ body {
           margin-top: 0.625rem;
         }
       }
+      input {
+        flex-basis: 50%;
+        background-color: $success-btn-color;
+        color: #fff;
+        margin: 3.5rem 0;
+        height: 3.875rem;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        font-size: 1.25rem;
+        font-weight: 20px;
+        &:hover{
+          @include success-box-shadow;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  footer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    max-width:  $max-width;
+    padding: 7.8125rem $main-side-padding;
+    background-color: #1C1E1F;
+    justify-content: space-around;
+    .contact_info, .company_info, .services_info, .legal_info {
+      flex-basis: 25%;
+      color: #7E8183;
+      font-size: 1rem;
+    }
+    .contact_info {
+      .rate_info {
+        margin: 3.125rem 0;
+      }
+      .another_info {
+        background-color: #1C1E1F;
+        border: 2px solid #7E8183;
+        color: #7E8183;
+        font-family:  $paragraph-font;
+        font-size: 1rem;
+        border-radius: 10px;
+        text-align: center;
+        outline: none;
+        padding:  0 0.5rem;
+      }
+    }
+    .company_info, .services_info {
+      ul {
+        width: 100%;
+        li {
+          list-style-type: none;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+    .company_info {
+      .company_info_list_item {
+        margin-left: 2rem;
+      }
+    }
+    .legal_info {
+      .legal_info_social{
+        display: flex;
+        flex-wrap: wrap;
+        p {
+          flex-basis: 100%;
+          margin-bottom: 0.5rem;
+        }
+        .legal_info_social_icon{
+          width: 1.75rem;
+          height: 1.75rem;
+          border-radius: 5px;
+          background-position: center;
+          background-size: contain;
+          box-shadow: inset 0 0 0 999px rgba(28, 30, 31, 0.8);
+          border: none;
+          margin-right: 0.625rem;
+
+          &:hover {
+            box-shadow: none;
+            cursor: pointer;
+          }
+        }
+        .fb {
+          background-image: url("../img/icon/logos-facebook.png");
+        }
+        .inst {
+          background-image: url("../img/icon/logos-instagram.png");
+        }
+        .ytb {
+          background-image: url("../img/icon/logos-youtube.png");
+        }
+        .pin {
+          background-image: url("../img/icon/logos-pinterest.png");
+        }
+      }
+      .legal_info_social_payment {
+        padding: 2rem 0;
+        p {
+          margin-bottom: 0.5rem;
+        }
+      }
     }
   }
 }
