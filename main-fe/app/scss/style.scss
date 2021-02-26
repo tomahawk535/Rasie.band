@@ -206,7 +206,7 @@ body {
       display: flex;
       flex-wrap: wrap;
       .promo-info {
-        flex-basis: 47%;
+        flex-basis: 50%;
         margin-right: auto;
         padding-right: 1rem;
         h1 {
@@ -241,40 +241,56 @@ body {
         }
       }
       .promo-img {
-        flex-basis: 53%;
-        max-width: 682px;
+        flex-basis: 50%;
         margin-left: auto;
-        background-image: url("../img/dots.svg");
-        background-repeat: no-repeat;
-        background-position: top left;
-        padding-left: 103px;
-        overflow: hidden;
-        border-bottom-right-radius: 50%;
-        border-bottom-left-radius: 50%;
+        img  {
+          width: 100%;
+        }
       }
-      .promo-bg {
-        background-image: url("../img/promo-vector (1).svg");
-        background-repeat: no-repeat;
-        background-size: contain;
-        transform: matrix(0.92, 0.39, -0.39, 0.92, 0, 0);
-        width: 632px;
-        height: 678px;
-        z-index: -1;
-        position: relative;
-        top: -630px;
-        left: 50%;
-        overflow: hidden;
-      }
+
     }
     .requirements {
       display: flex;
       flex-wrap: wrap;
       max-width: 100%;
-      img {
-        flex-basis: 45%;
-        max-width: 600px;
-      };
-      .requirements-info {
+      padding-top: 8.6875rem;
+      .requirements_note {
+        flex-basis: 50%;
+        img {
+          width: 100%;
+        }
+        .requirements_note_item {
+          background-color: #fff;
+          width: 23.75rem;
+          height: 17.5625rem;
+          display: flex;
+          @include primary-box-shadow;
+          border-radius: 10px;
+          flex-wrap: wrap;
+          padding: 1.8125rem 1.75rem 2.375em;
+          position: relative;
+          top: -200px;
+          left: 150px;
+          img {
+            flex-basis: 10%;
+            max-width: 60px;
+            height: 60px;
+          }
+          h4 {
+            flex-basis: 60%;
+            font-family: $header-font;
+            color: $header-color;
+            font-size: 1.125rem;
+            margin-top: 20px;
+            margin-left: 1rem;
+          }
+          p {
+            flex-basis: 100%;
+            @include paragraph-small;
+          }
+        }
+      }
+      .requirements_info {
         padding-top: 5.53125rem;;
         flex-basis: 50%;
         display: flex;
@@ -289,34 +305,68 @@ body {
           @include paragraph-middle;
         }
       }
-      .note {
-        background-color: #fff;
-        width: 23.75rem;
-        height: 17.5625rem;
-        display: flex;
-        @include primary-box-shadow;
-        border-radius: 10px;
-        flex-wrap: wrap;
-        padding: 1.8125rem 1.75rem 2.375em;
-        position: relative;
-        top: -200px;
-        left: 150px;
-        img {
-          flex-basis: 10%;
-          max-width: 60px;
-          height: 60px;
-        }
-        h4 {
-          flex-basis: 60%;
-          font-family: $header-font;
-          color: $header-color;
-          font-size: 1.125rem;
-          margin-top: 20px;
-          margin-left: 1rem;
-        }
-        p {
-          flex-basis: 100%;
-          @include paragraph-small;
+    }
+    .carousel {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      h2 {
+        font-family:  $header-font;
+        font-size: 2rem;
+        color:  $header-color;
+        margin-bottom: 1rem;
+      }
+      p {
+        @include paragraph-middle;
+      }
+      .carousel_slick {
+        flex-basis: 100%;
+        justify-content: space-around;
+        .carousel_slick_item {
+          display: flex;
+          flex-basis: 30%;
+          flex-wrap: wrap;
+          width: 23.75rem;
+          height: 31.25rem;
+          padding: 0 1%;
+          margin: 1rem;
+          @include primary-box-shadow;
+          .carousel_slick_item_rate {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            p {
+              margin-left: auto;
+              @include paragraph-small;
+              margin-right: 0.625rem;
+              align-self: center;
+            }
+          }
+          p {
+            @include paragraph-middle;
+            text-align: left;
+          }
+          .carousel_slick_item_user {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            img {
+              width: 24px;
+              height: 24px;
+            }
+            p {
+              @include paragraph-small;
+              line-height: 1rem;
+              &:nth-child(3) {
+                margin: -1.9375rem 0 1.9375rem;
+              }
+            }
+          }
+
         }
       }
     }

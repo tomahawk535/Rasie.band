@@ -1,5 +1,12 @@
 $(document).ready(function(){
     PopUpHide();
+    $('.carousel_slick').slick({
+        autoplay: true,
+        arrows: false,
+        dots: true,
+        slidesToShow: 3,
+        adaptiveHeight: true
+    })
 });
 
 
