@@ -416,13 +416,73 @@ body {
       width: 100%;
       display: flex;
       padding-top: 7.5rem;
+      flex-wrap: wrap;
       .mistakes_info {
         flex-basis: 50%;
         display: flex;
         flex-direction: column;
+        h2 {
+          color:  $header-color;
+          font-family:  $header-font;
+          font-size: 2rem;
+        }
+        p {
+          @include paragraph-middle;
+          line-height:  1.6875rem;
+          margin-top: 20px;
+        }
       }
       .mistakes_img {
         flex-basis: 50%;
+        img {
+          width: 100%;
+        }
+      }
+      .mistakes_note {
+        flex-basis: 100%;
+        padding-top: 3.875rem;
+        display: flex;
+        .mistakes_note_item {
+          background-image: url("../img/bg.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          flex-basis: 50%;
+          justify-content: center;
+          padding: 2rem;
+          .note_item {
+            width: 23.75rem;
+            @include primary-box-shadow;
+            margin: 0 auto;
+            border-radius: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 1.8125rem 1.75rem 2.375em;
+            background-color: #ffffff;
+            img {
+              flex-basis: 10%;
+              max-width: 60px;
+              height: 60px;
+            }
+            h4 {
+              flex-basis: 60%;
+              font-family: $header-font;
+              color: $header-color;
+              font-size: 1.125rem;
+              margin-top: 20px;
+              margin-left: 1rem;
+            }
+            p {
+              flex-basis: 100%;
+              @include paragraph-small;
+              margin-top: 1rem;
+            }
+          }
+        }
+        p {
+          flex-basis: 50%;
+          @include paragraph-middle;
+          margin-top: 2rem;
+        }
       }
     }
   }
