@@ -30,7 +30,6 @@ function FaqHide () {
 }
 // Функция открытия FAQ
 function FaqOpen () {
-    a = $('.faq-hidden-text')
-    a.toggle();
+   $(this).siblings('.faq-hidden-text').toggle();
 }
 $('.faq-toggle').click(FaqOpen);
