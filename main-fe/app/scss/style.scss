@@ -772,3 +772,149 @@ body {
     }
   }
 }
+
+
+@media all and  (max-width: 770px){
+
+body {
+  header {
+    .no-mobile {
+      display: none;
+    } }
+  article {
+    .no-mobile {
+      display: none;
+    }
+    .promo {
+      .promo-info {
+        flex-basis: 100%;
+      }
+    }
+    .requirements {
+      padding-top: 1rem;
+      .requirements_info {
+        order: 1;
+        flex-basis: 100%;
+      }
+      .requirements_note {
+        order: 2;
+        flex-basis: 100%;
+        margin-top: 3rem;
+        .mobile {
+          margin-left: -8.5rem;
+        }
+      }
+    }
+    .calc {
+      width: 100%;
+      form {
+        #workType, #academicLevel, .counter, .calendar {
+          flex-basis: 47%;
+          margin-top: 1rem;
+        }
+        #paperType, #subj {
+          flex-basis: 100%;
+          margin-top: 1rem;
+        }
+        .summ {
+          order: 7;
+          margin: 1rem  auto 0;
+          flex-basis: 100%;
+          box-shadow: none;
+          color: $success-btn-color;
+          background-color: #fff;
+        }
+        input {
+          margin:  1rem  auto 0;
+          flex-basis: 40%;
+          order: 8;
+        }
+      }
+    }
+    .authors {
+      padding-top: 1rem;
+      .authors_text, .authors_img {
+        flex-basis: 100%;
+      }
+      .authors_nav {
+        padding: 1rem 0;
+          .authors_nav_item {
+            flex-basis: 100%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 18px;
+            br {
+              display: none;
+            }
+          }
+        .author_nav_item_text {
+          flex-basis: 100%;
+          margin-top: 1rem;
+        }
+      }
+    }
+    .advantages {
+      flex-wrap: wrap;
+      .advantages_info {
+        flex-basis: 100%;
+      }
+      .advantages-img {
+        flex-basis: 70%;
+      }
+    }
+    .mistakes {
+      .mistakes_img {
+        order: 1;
+        flex-basis: 70%;
+      }
+      .mistakes_info {
+        order: 3;
+        flex-basis: 100%;
+        margin-top: 1rem;
+      }
+      .mistakes_note {
+        order: 3;
+        display: flex;
+        flex-wrap: wrap;
+        .mistakes_note_item {
+          order:1;
+        }
+        p {
+          order: 2;
+          flex-basis: 100%;
+        }
+      }
+    }
+    .faq {
+      padding-top: 3rem;
+    }
+
+  }
+
+  footer {
+    .contact_info, .company_info, .services_info, .legal_info {
+      flex-basis: 50%;
+    }
+    .company_info {
+      order:1;
+      margin-bottom: 3.75rem;
+      .company_info_list_item {
+        margin-left: 0;
+
+      }
+    }
+    .services_info {
+      order: 2;
+      margin-bottom: 3.75rem;
+    }
+    .contact_info {
+      order: 3;
+    }
+    .legal_info {
+      order: 4;
+    }
+  }
+}
+
+
+}
