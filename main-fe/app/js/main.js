@@ -38,7 +38,7 @@ $('.faq-toggle').click(FaqOpen);
 
 function SubmitForm () {
     let $form = $(this);
-    $.post(
+    $.get(
         $form.attr('action'),
         $form.serialize()
     );

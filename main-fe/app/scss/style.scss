@@ -455,6 +455,68 @@ body {
         }
       }
     }
+    .authors {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      padding-top: 6.25rem;
+      .authors_text {
+        flex-basis: 50%;
+        padding: 4.5rem 0;
+        h2 {
+          font-family:  $header-font;
+          color:  $header-color;
+          font-size: 2rem;
+        }
+        p {
+          @include paragraph-middle;
+          line-height: 1.6875rem;
+          margin-top: 1rem;
+        }
+      }
+      .authors_img {
+        flex-basis: 50%;
+        img {
+          width: 100%;
+        }
+      }
+      .authors_nav {
+        flex-basis: 100%;
+        display: flex;
+        padding: 1rem 8%;
+        flex-wrap: wrap;
+        .authors_nav_item {
+          flex-basis: 40%;
+          font-family: $header-font;
+          font-size: 1.375rem;
+          color:  $main-text-color;
+          h4 {
+            &::before {
+              content: '-';
+              position: absolute;
+              left: 13.625rem;
+            }
+            &:hover {
+              color:  $success-btn-color;
+              cursor: pointer;
+
+            }
+            &:hover::before {
+              content: '—';
+            }
+
+          }
+        }
+        .author_nav_item_text {
+          flex-basis: 50%;
+          margin-left: auto;
+          @include paragraph-middle;
+          line-height: 1.6875rem;
+
+        }
+      }
+
+    }
     .advantages {
       width: 100%;
       display: flex;
