@@ -32,13 +32,24 @@ function FaqOpen () {
 }
 $('.faq-toggle').click(FaqOpen);
 
+// Counter
+$('#count-minus').click(function () {
+    var $input = $('#count');
+    var count = parseInt($input.val()) - 1;
+    count = count < 1 ? 1 : count;
+    $input.val(count);
+    return false;
+});
+$('#count-plus').click(function () {
+    var $input = $('#count');
+    $input.val(parseInt($input.val()) + 1);
+    return false;
+});
 
 // форма
-
-
 function SubmitForm () {
-    let $form = $(this);
-    $.get(
+    let $form = $('#form');
+    $.post(
         $form.attr('action'),
         $form.serialize()
     );

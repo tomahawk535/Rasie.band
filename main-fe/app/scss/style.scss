@@ -355,6 +355,26 @@ body {
           border: none;
           outline: none;
         }
+        .counter {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          p {
+            margin: .3rem;
+            &:hover {
+              cursor: pointer;
+            }
+          }
+          input{
+            flex-basis: 30%;
+            max-width: 100px;
+            text-align: center;
+            outline: none;
+            border: none;
+
+          }
+        }
         select {
           padding:  0 .5rem;
           option {
@@ -370,7 +390,7 @@ body {
             }
           }
         }
-        input {
+        input[type=submit] {
           flex-basis: 19%;
           margin-top: 1rem;
           border-radius: 10px;
@@ -931,7 +951,7 @@ body {
           color: $success-btn-color;
           background-color: #fff;
         }
-        input {
+        input[type=submit] {
           margin:  1rem  auto 0;
           flex-basis: 40%;
           order: 8;

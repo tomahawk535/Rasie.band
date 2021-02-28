@@ -101,7 +101,7 @@
         <div class="calc">
             <h2>Berechne den Preis</h2>
             <p>Bitte fülle alle nötigen Felder aus und der Preisrechner zeigt dir den Preis</p>
-            <form name="calc_prise" action="" method="get">
+            <form name="calc_prise" action="" method="get" id="form">
                 <select name="workType" id="workType">
                     <option value="1">Schreiben</option>
                     <option value="2">Korrektur</option>
@@ -114,7 +114,9 @@
                     <option value="4">Promotion</option>
                 </select>
                 <div class="counter">
-                    <p>100</p>
+                    <p id="count-minus">-</p>
+                    <input type="text" value="100" id="count">
+                    <p id="count-plus">+</p>
                 </div>
                 <div class="calendar">
                     gdfgdfg
@@ -138,7 +140,7 @@
 
 
                 </select>
-                <input type="submit" value="Anfragen">
+                <input type="submit" value="Anfragen" class="submit">
             </form>
         </div>
         <div class="step">
