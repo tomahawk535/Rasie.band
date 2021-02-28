@@ -46,14 +46,13 @@ $('#count-plus').click(function () {
     return false;
 });
 
-// форма
-function SubmitForm () {
-    let $form = $('#form');
-    $.post(
-        $form.attr('action'),
-        $form.serialize()
-    );
-    return false;
+// отправка формы
+function SendForm (){
+    var $data = {};
+    $('#form').find('input, select, #count').each(function (){
+        $data[this.name]=$(this).val();
+    });
+    console.log($data);
 }
 
-$('form').submit (SubmitForm);
+$('.submit').click(SendForm);
