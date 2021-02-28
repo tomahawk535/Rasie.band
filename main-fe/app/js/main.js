@@ -8,6 +8,11 @@ $(document).ready(function(){
         adaptiveHeight: true
     });
     FaqHide();
+    $('.calendar').datepicker({
+        autoClose: true,
+
+        
+    })
 });
 
 //Функция отображения PopUp
@@ -49,10 +54,12 @@ $('#count-plus').click(function () {
 // отправка формы
 function SendForm (){
     var $data = {};
-    $('#form').find('input, select, #count').each(function (){
+    $('#form').find('input, select, #count').map(function (){
         $data[this.name]=$(this).val();
     });
     console.log($data);
 }
 
 $('.submit').click(SendForm);
+
+

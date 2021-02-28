@@ -9,10 +9,13 @@
 
     <link rel="shortcut icon" href="img/logo.png" type="image/png">
     <link rel="stylesheet" href="style/style.min.css">
+    <link href="./datapicker/css/datepicker.min.css" rel="stylesheet" type="text/css">
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
 
 </head>
 <body>
@@ -118,9 +121,7 @@
                     <input  name="count" type="text" value="100" id="count">
                     <p id="count-plus">+</p>
                 </div>
-                <div class="calendar">
-                    gdfgdfg
-                </div>
+                <input type="text" class="calendar datepicker-here" name=date value="12.08.2020"  data-position="right top">
 
                 <input type="text" disabled value="€ 56.25" class="summ" name="sum">
                 <select name="paperType" id="paperType">
@@ -411,6 +412,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="datapicker/js/datepicker.min.js"></script>
     <script src="js/main.min.js"></script>
 
 </body>
