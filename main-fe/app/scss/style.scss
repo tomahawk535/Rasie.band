@@ -39,6 +39,7 @@ body {
     align-items: center;
     padding: 0 $main-side-padding;
     background-color: #fff;
+    margin: 0 auto;
     @include primary-box-shadow;
     p {
       color: $main-text-color;
@@ -136,7 +137,7 @@ body {
     display: flex;
     position: absolute;
     top: 10%;
-    left: 17%;
+    left: 15%;
     background-color: rgba(0, 0, 0, 0.1);
     img {
       z-index: 1;
@@ -201,6 +202,7 @@ body {
     flex-wrap: wrap;
     max-width:  $max-width;
     padding: 7.8125rem $main-side-padding;
+    margin: 0 auto;
     .promo {
       flex-basis: 100%;
       display: flex;
@@ -412,10 +414,22 @@ body {
       width: 100%;
       justify-content: center;
       flex-wrap: wrap;
+      .step_info {
+        flex-basis: 100%;
+        h2 {
+          font-family:  $header-font;
+          color:  $header-color;
+          margin-bottom: 1rem;
+        }
+        p {
+          @include paragraph-middle;
+        }
+      }
       .step_info_visability  {
         display: flex;
         justify-content: space-between;
         flex-wrap: nowrap;
+        margin-top: 1rem;
         .step_info_visability_item {
           display: flex;
           flex-direction: column;
@@ -812,6 +826,7 @@ body {
     }
   }
   footer {
+    margin: 0 auto;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -900,7 +915,27 @@ body {
   }
 }
 
-
+@media all  and (max-width: 1260px){
+  body article .requirements .requirements_note img.mobile {
+    margin-left: -5rem;
+  }
+  body article .requirements .requirements_note .requirements_note_item {
+    width: 70%;
+    height: auto;
+    position: relative;
+    top: -100px;
+    left: 50px;
+  }
+  body article .authors .authors_nav .authors_nav_item {
+    flex-basis: 50%;
+  }
+  body footer {
+    padding: 7.8125rem 5%
+  }
+  .tb-no {
+    display: none;
+  }
+}
 @media all and  (max-width: 770px){
 
 body {
@@ -1092,6 +1127,244 @@ body {
     }
   }
 }
+
+
+}
+@media all and  (max-width: 599px){
+
+  body {
+    header {
+      .no-mobile {
+        display: none;
+      } }
+    article {
+      padding: 5rem 2%;
+      .no-mobile {
+        display: none;
+      }
+      .promo {
+        .promo-info {
+          flex-basis: 100%;
+          text-align: justify;
+          padding-right: 0;
+          justify-content: center;
+          h1 {
+            font-size: 2rem;
+          }
+          input {
+            margin: 0 auto;
+            width: 100%;
+          }
+        }
+      }
+      .requirements {
+        padding-top: .5rem;
+        .requirements_info {
+          order: 1;
+          flex-basis: 100%;
+          text-align: justify;
+        }
+        .requirements_note {
+          order: 2;
+          flex-basis: 100%;
+          margin-top: .5rem;
+          .requirements_note_item {
+            width: 100%;
+            height: auto;
+            padding: 0.5rem;
+            position: relative;
+            top: -3rem;
+            left: 0;
+            z-index: 1;
+          }
+          .mobile {
+            margin-left: -1.5rem;
+          }
+        }
+      }
+      .calc {
+        width: 100%;
+        padding: 0;
+        form {
+          #workType, #academicLevel, .counter, .calendar {
+            flex-basis: 100%;
+            margin-top: 1rem;
+          }
+          #paperType, #subj {
+            flex-basis: 100%;
+            margin-top: 1rem;
+          }
+          .summ {
+            order: 7;
+            margin: 1rem  auto 0;
+            flex-basis: 100%;
+            box-shadow: none;
+            color: $success-btn-color;
+            background-color: #fff;
+          }
+          input[type=submit] {
+            margin:  1rem  auto 0;
+            flex-basis: 40%;
+            order: 8;
+          }
+        }
+      }
+      .step {
+        .step_info{
+          text-align: justify;
+          max-width: 100%;
+          h2 {
+            font-family:  $header-font;
+            color:  $header-color;
+            margin-bottom: 1rem;
+            text-align: center;
+          }
+          p {
+            @include paragraph-middle;
+          }
+          .step_info_visability {
+            .step_info_visability_item {
+              p{
+                font-size: 16px;
+                display: none;
+              }
+            }
+            .step2::before, .step3::before, .step4::before {
+
+
+              top:50%;
+              left: -50%;
+
+            }
+          }
+        }
+        .step_nav {
+          .step_nav_item {
+            display: flex;
+            flex-basis: 100%;
+            justify-content: center;
+            padding-left: 0;
+            flex-wrap: wrap;
+            h4 {
+              font-size: 12px;
+              &:hover::before {
+                content: '';
+
+              }
+            }
+            h4::before {
+              content: '';
+            }
+          }
+          .step_nav_item_text {
+            flex-basis: 100%;
+          }
+
+        }
+      }
+      .authors {
+        padding-top: 1rem;
+        text-align: justify;
+        .authors_img {
+            flex-basis: 90%;
+        }
+        .authors_text {
+          flex-basis: 100%;
+        }
+        .authors_nav {
+          padding: 1rem 0;
+          .authors_nav_item {
+            flex-basis: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+            font-size: 18px;
+            h4 {
+              font-size: 16px;
+              flex-basis: 100%;
+              &:hover::before {
+                content: '';
+
+              }
+              &::before {
+                content:'';
+              }
+            }
+            br {
+              display: none;
+            }
+          }
+          .author_nav_item_text {
+            flex-basis: 100%;
+            margin-top: 1rem;
+            text-align: justify;
+          }
+        }
+      }
+      .advantages {
+
+        .advantages_info {
+          margin-top: 1rem;
+        }
+      }
+      .mistakes {
+        padding-top: 1rem;
+        .mistakes_info {
+          order: 3;
+          flex-basis: 100%;
+          margin-top: 1rem;
+          text-align: justify;
+         h2{
+           font-size: 1.5rem;
+         }
+        }
+        .mistakes_note {
+          order: 3;
+          display: flex;
+          flex-wrap: wrap;
+          flex-basis: 100%;
+          .mistakes_note_item {
+            order:1;
+            flex-basis: 100%;
+            padding: 2rem 0;
+            .note_item {
+              width: 100%;
+            }
+          }
+
+        }
+      }
+      .faq .faq_item {
+        flex-basis: 90%;
+      }
+    }
+
+    footer {
+      .contact_info, .company_info, .services_info, .legal_info {
+        flex-basis: 100%;
+      }
+      .company_info {
+        order:1;
+        margin-bottom: 3.75rem;
+        .company_info_list_item {
+          margin-left: 0;
+
+        }
+      }
+      .services_info {
+        order: 2;
+        margin-bottom: 3.75rem;
+      }
+      .contact_info {
+        order: 3;
+        margin-bottom: 3.75rem;
+      }
+      .legal_info {
+        order: 4;
+      }
+    }
+  }
 
 
 }

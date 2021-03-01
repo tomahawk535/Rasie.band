@@ -30,6 +30,13 @@ $(document).ready(function(){
                     centerMode: false,
                 }
             }
+            , {
+                breakpoint: 300,
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: false,
+                }
+            }
         ]
     });
     FaqHide();
@@ -161,15 +168,6 @@ $('#click_nav_item_third').click(function(){
 
 });
 
-
-
-
-
-
-// function ChangeText() {
-//     var $clickText = $('.authors_text');
-//     if($clickText::first-child).
-// }
 //Функция отображения PopUp
 function PopUpShow(){
     $("#pop-up-form").fadeIn();
