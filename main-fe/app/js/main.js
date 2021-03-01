@@ -1,20 +1,42 @@
 $(document).ready(function(){
     PopUpHide();
-    $('.carousel_slick').slick({
+    $('.desktop-carousel').slick({
         autoplay: true,
         arrows: false,
         dots: true,
         slidesToShow: 3,
-        adaptiveHeight: true
+        adaptiveHeight: true,
+        centerMode: false,
+        mobileFirst: true,
+        responsive: [
+            {
+                breakpoint: 700,
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: true
+                }
+            },
+            {
+                breakpoint: 1100,
+                settings: {
+                    slidesToShow: 3,
+                    centerMode: false
+                }
+            },
+            {
+                breakpoint: 550,
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: false,
+                }
+            }
+        ]
     });
     FaqHide();
     $('.calendar').datepicker({
         autoClose: true,
-
-        
     })
 });
-
 //Функция отображения PopUp
 function PopUpShow(){
     $("#pop-up-form").fadeIn();
