@@ -37,8 +37,90 @@ $(document).ready(function(){
         autoClose: true,
     })
 });
+//Cмена текста для блока  шаги написаня
+$('#step_nav_item_click_first').click(function(){
+    $(this).data('clicked', true);
+    if ($('#step_nav_item_click_first').data('clicked')) {
+        $('.step_nav_item_text').html(
+            '                    <h4>Die Einleitung enthält diese Elemente:</h4>\n' +
+            '                    <p><span>1.</span> Einführung in das Thema und die Frage, die behandelt wird.</p>\n' +
+            '                    <p><span>2.</span> Übersicht über die inhaltliche Vorgehensweise und die Struktur der Arbeit.</p>\n' +
+            '                    <p><span>3.</span> Formulierung des Ziels der Arbeit und Erläuterung der notwendigen Schritte, um dieses zu erreichen.</p>\n' +
+            '                    <p><span>Übrigens:</span> <br/>\n' +
+            '                        Die Einleitung macht fünf bis zehn Prozent der Facharbeit aus.</p>\n'
+                           );
+    }
+    else {
 
-//
+    }
+});
+
+$('#step_nav_item_click_second').click(function(){
+    $(this).data('clicked', true);
+    if ($('#step_nav_item_click_second').data('clicked')) {
+        $('.step_nav_item_text').html(
+            '                    <h4>Einführung wird bestehen diese Elemente:</h4>\n' +
+            '                    <p><span>1.</span> Einführung in das Thema und die Frage, die behandelt wird.</p>\n' +
+            '                    <p><span>2.</span> Übersicht über die inhaltliche Vorgehensweise und die Struktur der Arbeit.</p>\n' +
+            '                    <p><span>3.</span> Formulierung des Ziels der Arbeit und Erläuterung der notwendigen Schritte, um dieses zu erreichen.</p>\n' +
+            '                    <p><span>Übrigens:</span> <br/>\n' +
+            '                        Die Einleitung macht fünf bis zehn Prozent der Facharbeit aus.</p>\n'
+        );
+    }
+    else {
+
+    }
+});
+
+$('#step_nav_item_click_third').click(function(){
+    $(this).data('clicked', true);
+    if ($('#step_nav_item_click_third').data('clicked')) {
+        $('.step_nav_item_text').html(
+            '                    <h4>Den Hauptteil verfassen diese Elemente:</h4>\n' +
+            '                    <p><span>1.</span> Einführung in das Thema und die Frage, die behandelt wird.</p>\n' +
+            '                    <p><span>2.</span> Übersicht über die inhaltliche Vorgehensweise und die Struktur der Arbeit.</p>\n' +
+            '                    <p><span>Übrigens:</span> <br/>\n' +
+            '                        Die Einleitung macht fünf bis zehn Prozent der Facharbeit aus.</p>\n'
+        );
+    }
+    else {
+
+    }
+});
+
+$('#step_nav_item_click_fours').click(function(){
+    $(this).data('clicked', true);
+    if ($('#step_nav_item_click_fours').data('clicked')) {
+        $('.step_nav_item_text').html(
+            '                    <h4>Das Fazit schreiben diese Elemente:</h4>\n' +
+            '                    <p><span>1.</span> Einführung in das Thema und die Frage, die behandelt wird.</p>\n' +
+            '                    <p><span>Übrigens:</span> <br/>\n' +
+            '                        Die Einleitung macht fünf bis zehn Prozent der Facharbeit aus.</p>\n'
+        );
+    }
+    else {
+
+    }
+});
+
+$('#step_nav_item_click_fifth').click(function(){
+    $(this).data('clicked', true);
+    if ($('#step_nav_item_click_fifth').data('clicked')) {
+        $('.step_nav_item_text').html(
+            '                    <h4>Richtig zitieren will gelernt sein</h4>\n' +
+            '                    <p> Einführung in das Thema und die Frage, die behandelt wird.</p>\n' +
+            '                    <p>Übersicht über die inhaltliche Vorgehensweise und die Struktur der Arbeit.</p>\n' +
+            '                    <p>Formulierung des Ziels der Arbeit und Erläuterung der notwendigen Schritte, um dieses zu erreichen.</p>\n' +
+            '                    <p><span>Übrigens:</span> <br/>\n' +
+            '                        Die Einleitung macht fünf bis zehn Prozent der Facharbeit aus.</p>\n'
+        );
+    }
+    else {
+
+    }
+});
+
+//Смена текста для блока про авторов
 
 $('#click_nav_item_first').click(function(){
     $(this).data('clicked', true);
