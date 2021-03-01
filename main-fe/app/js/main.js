@@ -37,6 +37,57 @@ $(document).ready(function(){
         autoClose: true,
     })
 });
+
+//
+
+$('#click_nav_item_first').click(function(){
+    $(this).data('clicked', true);
+    if ($('#click_nav_item_first').data('clicked')) {
+        console.log('first');
+        $('.author_nav_item_text').text('In der Vorbereitungsphase findet der Ghostwriter ein geeignetes Thema und er' +
+            ' recherchiert nach wissenschaftlicher Literatur. Darauf aufbauend erstellt er die Gliederung für Deine ' +
+            'Facharbeit.');
+    }
+    else {
+
+    }
+
+});
+$('#click_nav_item_second').click(function(){
+    $(this).data('clicked', true);
+    if ($('#click_nav_item_second').data('clicked')) {
+        console.log('second')
+        $('.author_nav_item_text').text('In der zweiten Phase nach der Schaffung der Struktur und Forschung der Literatur. ' +
+            'Ihr Schriftsteller macht sich an die Arbeit.');
+    }
+    else {
+
+    }
+
+});
+$('#click_nav_item_third').click(function(){
+    $(this).data('clicked', true);
+    if ($('#click_nav_item_third').data('clicked')) {
+        console.log('third')
+        $('.author_nav_item_text').text('In der dritten Phase wird die Arbeit verifiziert, eine Rezension von Forschern' +
+            ' auf diesem Gebiet wird darauf geschrieben. Außerdem werden Abstracts für ihre Rede geschrieben. und eine ' +
+            'Liste von Fragen und zusätzlicher Literatur für die Verteidigung wird vorbereitet.');
+    }
+    else {
+
+    }
+
+});
+
+
+
+
+
+
+// function ChangeText() {
+//     var $clickText = $('.authors_text');
+//     if($clickText::first-child).
+// }
 //Функция отображения PopUp
 function PopUpShow(){
     $("#pop-up-form").fadeIn();
